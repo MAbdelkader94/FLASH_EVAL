@@ -95,7 +95,7 @@ def process_site(usgs_id, sub_peaks, sites_meta, force=False):
     out = C.FLASH_DIR / f"{usgs_id}_flash_maxQ.parquet"
     sm = sites_meta.set_index("USGS_ID").loc[usgs_id]
     iy = int(sm["flash_iy"]); ix = int(sm["flash_ix"])
-    tc_h = float(sm["tc_h"])
+    tc_h = float(sm["tc_kirpich_fallback_h"]) if pd.notna(sm["tc_kirpich_fallback_h"]) else float(sm["tc_h"])
 
     have = pd.read_parquet(out) if out.exists() else pd.DataFrame()
     sess = requests.Session()

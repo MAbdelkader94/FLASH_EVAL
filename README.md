@@ -91,7 +91,7 @@ That orchestrator runs the seven steps in order:
 
 | Step | Script | What it does |
 |------|--------|--------------|
-| 01 | `step01_build_sites.py`     | Union all 5 source files, **filter to drainage ≤ 1200 km² (flash-flood scope)**, write `data/sites/sites_master.csv` (≈ 7,100 sites). Embeds FLASH grid index (iy, ix), drainage area, **time of concentration** (Mockus from PaperList where available, Kirpich+Hack fallback otherwise), action stage, NWS LID, radar coverage. Override the area cap with `--max-drainage-km2 N` (or `0` to disable). |
+| 01 | `step01_build_sites.py`     | Union all 5 source files, **filter to drainage ≤ 1200 km² AND radar coverage ≥ 60 %**, write `data/sites/sites_master.csv` (≈ 4,568 sites). Embeds FLASH grid index (iy, ix), drainage area, **time of concentration** (Mockus from PaperList where available, Kirpich+Hack fallback otherwise), action stage, NWS LID, radar coverage. Override the area cap with `--max-drainage-km2 N` (or `0` to disable). |
 | 02 | `step02_fetch_usgs.py`      | Streams USGS NWIS instantaneous discharge for `2025-08-05 → 2026-04-30` for every site, **converts every timestamp to UTC**, writes `data/usgs/<USGS>.parquet`. Fully resumable. |
 | 03 | `step03_extract_events.py`  | Resamples each series to hourly (per `little_hope.ipynb`), runs `hydrotools.events.event_detection.decomposition.list_events` with `halflife=6h, window=7D, min_event=6h, start_radius=6h`, writes `data/events/<USGS>_events.parquet`. |
 | 04 | `step04_filter_peaks.py`    | Aggregates all events into `master_peaks.csv` and writes the **above-median** subset (default; `--filter above_p90` available). |
@@ -169,6 +169,15 @@ HT_START_RADIUS   = "6h"
 - Gourley, J.J. et al. (2017). The FLASH project. *BAMS*, 98(2), 361-372.
 - Mockus, V. (1961). NEH-4 unit hydrograph lag time formula (NRCS).
 - Kirpich, Z.P. (1940). Time of concentration of small agricultural watersheds.
-- Hack, J.T. (1957). Studies of longitudinal stream profiles in Virginia and Maryland.
-- HydroTools — https://github.com/NOAA-OWP/hydrotools
-- NOAA MRMS public bucket — https://noaa-mrms-pds.s3.amazonaws.com
+- Hack, J.T. (1957). Studies of longitudinal stream profiles in Virginia and Ma
+## Time of concentration used in the FLASH window
+
+Step 05 sizes the FLASH search window as `peak ± 2 · t_c`, using
+`tc_kirpich_fallback_h` from `sites_master.csv` (Kirpich 1940 with
+Hack 1957 length-area + 0.5 % default slope). This is uniformly
+defined across all sites, unlike the PaperList Mockus value which
+only exists for ~2,500 of the 4,568 filtered sites.
+
+If you prefer the PaperList Mockus t_c where available, edit the
+single line in `src/step05_fetch_flash.py` that reads `tc_kirpich_fallback_h`
+and switch it to `tc_h` (the existing fallback chain).

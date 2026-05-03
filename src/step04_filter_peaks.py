@@ -38,7 +38,7 @@ def main():
         if d.empty: continue
         d["USGS_ID"] = sid
         if sid in sm.index:
-            for c in ("lat", "lon", "drainage_km2", "tc_h", "flash_iy",
+            for c in ("lat", "lon", "drainage_km2", "tc_h", "tc_kirpich_fallback_h", "flash_iy",
                       "flash_ix", "action_stage_ft", "nws_lid"):
                 d[c] = sm.loc[sid].get(c, np.nan)
         rows.append(d)
@@ -47,7 +47,7 @@ def main():
         print("no events found"); return
 
     cols = ["USGS_ID", "lat", "lon", "drainage_km2", "tc_h",
-            "flash_iy", "flash_ix",
+            "flash_iy", "flash_ix", "tc_kirpich_fallback_h",
             "start", "end", "peak_time",
             "peak_q_cms", "peak_q_unit_cms_per_km2",
             "action_stage_ft", "nws_lid"]
