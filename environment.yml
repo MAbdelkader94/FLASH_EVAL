@@ -1,0 +1,22 @@
+name: flash-eval
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - pyarrow
+  - scipy
+  - matplotlib
+  - requests
+  - boto3
+  - botocore
+  - pygrib
+  - eccodes
+  - jupyterlab
+  - tqdm
+  - pip:
+      - hydrotools.events
+      - hydrotools.nwis-client
+      - pynhd

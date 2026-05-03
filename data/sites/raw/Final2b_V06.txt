@@ -1,0 +1,330 @@
+[Basic]
+DEM=ef5_op_setup/EF5-US-Parameters-master/basic/dem_usa.tif
+DDM=ef5_op_setup/EF5-US-Parameters-master/basic/fdir_usa.tif
+FAM=ef5_op_setup/EF5-US-Parameters-master/basic/facc_usa.tif
+PROJ=geographic
+ESRIDDM=true SelfFAM=false
+
+[PrecipForcing IMERG]
+TYPE=TIF
+UNIT=mm/h
+FREQ=30u
+LOC=/Shared/lss_hvergaraarrieta/data/IMERG/V06/Final/final_ef5
+NAME=imerg.YYYYMMDDHHUU.tif
+
+#[PrecipForcing MRMS]
+#TYPE=MRMS
+#UNIT=mm/h
+#FREQ=5u
+#LOC=/hydros/humberva/CONUS_Datasets/MRMS_2002_2011_SoftLinks/
+#NAME=PRECIPRATE.YYYYMMDD.HHUU00.tif
+
+[PETForcing CLIMO]
+LOC=ef5_op_setup/EF5-US-Parameters-master/PET
+FREQ=1m
+UNIT=mm/d
+NAME=PET_MM_usa.tif
+TYPE=TIF
+
+[Gauge 08012000] lon=-92.631668 lat=30.480558 basinarea=1364.92
+[Gauge 08013000] lon=-92.673611 lat=30.995833 basinarea=1292.4
+[Gauge 08013500] lon=-92.813889 lat=30.640278 basinarea=1950.26
+[Gauge 08014500] lon=-92.893057 lat=30.698612 basinarea=1320.89
+[Gauge 08015500] lon=-92.915279 lat=30.502501 basinarea=4402.98
+[Gauge 08017200] lon=-96.076667 lat=33.132778 basinarea=209.789
+[Gauge 08017300] lon=-96.253056 lat=32.897778 basinarea=203.832
+[Gauge 08028000] lon=-93.352778 lat=30.952778 basinarea=945.346
+[Gauge 08031000] lon=-93.908333 lat=30.186111 basinarea=215.746
+[Gauge 08041500] lon=-94.263333 lat=30.397778 basinarea=2227.39
+[Gauge 08048970] lon=-97.264722 lat=32.603333 basinarea=218.854
+[Gauge 08061540] lon=-96.614167 lat=32.959722 basinarea=310.799
+[Gauge 08065800] lon=-95.777778 lat=30.884722 basinarea=831.386
+[Gauge 08066300] lon=-94.779722 lat=30.481389 basinarea=393.678
+[Gauge 08068325] lon=-95.546389 lat=30.105278 basinarea=106.189
+[Gauge 08069000] lon=-95.428611 lat=30.035556 basinarea=738.147
+[Gauge 08070200] lon=-95.124167 lat=30.145278 basinarea=1004.92
+[Gauge 08070500] lon=-95.302222 lat=30.259444 basinarea=271.949
+[Gauge 08071000] lon=-95.168056 lat=30.2325 basinarea=303.029
+[Gauge 08074500] lon=-95.396944 lat=29.775 basinarea=246.308
+[Gauge 08075770] lon=-95.267778 lat=29.793056 basinarea=41.6988
+[Gauge 08076500] lon=-95.334722 lat=29.861667 basinarea=74.3327
+[Gauge 08083100] lon=-100.388333 lat=32.7875 basinarea=590.517
+[Gauge 08084800] lon=-99.642222 lat=32.930833 basinarea=1238.01
+[Gauge 08086290] lon=-99.004167 lat=32.648333 basinarea=725.197
+[Gauge 08105095] lon=-97.666111 lat=30.703056 basinarea=184.925
+[Gauge 08120500] lon=-100.9075 lat=32.573611 basinarea=512.818
+[Gauge 08123800] lon=-101.013611 lat=32.199167 basinarea=25387.1
+[Gauge 08150000] lon=-99.734167 lat=30.504167 basinarea=4801.84
+[Gauge 08150700] lon=-99.108889 lat=30.660556 basinarea=8409.69
+[Gauge 08150800] lon=-99.095556 lat=30.643333 basinarea=556.847
+[Gauge 08152000] lon=-98.471944 lat=30.5575 basinarea=896.136
+[Gauge 08152900] lon=-98.869444 lat=30.220278 basinarea=955.706
+[Gauge 08155200] lon=-97.925278 lat=30.296111 basinarea=232.322
+[Gauge 08158700] lon=-98.0075 lat=30.082778 basinarea=321.159
+[Gauge 08159000] lon=-97.688333 lat=30.177778 basinarea=831.386
+[Gauge 08162600] lon=-96.170833 lat=28.927778 basinarea=375.548
+[Gauge 08164600] lon=-96.818889 lat=28.891111 basinarea=237.502
+[Gauge 08165500] lon=-99.321389 lat=30.069722 basinarea=745.917
+[Gauge 08166000] lon=-99.282778 lat=30.1 basinarea=295.259
+[Gauge 08167500] lon=-98.383333 lat=29.860278 basinarea=3405.83
+[Gauge 08171000] lon=-98.088611 lat=29.994167 basinarea=919.446
+[Gauge 08175000] lon=-97.449167 lat=29.215 basinarea=1421.9
+[Gauge 08176900] lon=-97.226111 lat=28.861389 basinarea=924.626
+[Gauge 08178880] lon=-99.069722 lat=29.723611 basinarea=849.516
+[Gauge 08186000] lon=-97.93 lat=29.013889 basinarea=2141.92
+[Gauge 08189500] lon=-97.278889 lat=28.291667 basinarea=1787.09
+[Gauge 08189700] lon=-97.620556 lat=28.282222 basinarea=639.727
+[Gauge 08190500] lon=-100.239167 lat=29.480836 basinarea=1797.45
+[Gauge 08195000] lon=-99.704444 lat=29.488333 basinarea=1007.51
+[Gauge 08198500] lon=-99.48028 lat=29.314168 basinarea=624.187
+[Gauge 08200000] lon=-99.247502 lat=29.570003 basinarea=247.603
+[Gauge 08200720] lon=-99.116667 lat=29.376111 basinarea=406.628
+[Gauge 08201500] lon=-99.402778 lat=29.573056 basinarea=116.549
+[Gauge 08202700] lon=-99.2875 lat=29.370556 basinarea=435.118
+[Gauge 08205500] lon=-99.144444 lat=28.736389 basinarea=8881.07
+[Gauge 08206600] lon=-98.547222 lat=28.467222 basinarea=11636.8
+[Gauge 08211520] lon=-97.501667 lat=27.711111 basinarea=233.876
+[Gauge 08212400] lon=-98.135556 lat=27.264167 basinarea=1243.19
+[Gauge 08279000] lon=-105.913056 lat=36.210833 basinarea=789.946
+[Gauge 08378500] lon=-105.682222 lat=35.708333 basinarea=489.508
+[Gauge 08447020] lon=-101.732778 lat=30.451944 basinarea=1976.16
+[Gauge 09036000] lon=-106.055833 lat=39.833889 basinarea=231.804
+[Gauge 09037500] lon=-106.180279 lat=40.00002 basinarea=476.558
+[Gauge 09050100] lon=-106.11 lat=39.575278 basinarea=241.646
+[Gauge 09146200] lon=-107.745278 lat=38.183889 basinarea=385.908
+[Gauge 09165000] lon=-108.059722 lat=37.638889 basinarea=271.949
+[Gauge 09166500] lon=-108.496944 lat=37.4725 basinarea=1305.35
+[Gauge 09217900] lon=-110.579722 lat=40.95889 basinarea=336.699
+[Gauge 09304500] lon=-107.861667 lat=40.033611 basinarea=1955.44
+[Gauge 09361500] lon=-107.879722 lat=37.279167 basinarea=1792.27
+[Gauge 09473000] lon=-110.629444 lat=32.844167 basinarea=1390.82
+[Gauge 09484000] lon=-110.809722 lat=32.316667 basinarea=91.9446
+[Gauge 09484500] lon=-110.840556 lat=32.265278 basinarea=567.207
+[Gauge 09484600] lon=-110.676944 lat=32.035833 basinarea=1183.62
+[Gauge 09498500] lon=-110.920833 lat=33.619444 basinarea=11152.5
+[Gauge 09499000] lon=-111.302778 lat=33.98 basinarea=1748.24
+[Gauge 09512280] lon=-111.953333 lat=33.887222 basinarea=214.192
+[Gauge 09535100] lon=-112.370278 lat=32.044167 basinarea=1473.7
+[Gauge 10105900] lon=-111.854444 lat=41.575556 basinarea=471.378
+[Gauge 10109000] lon=-111.781944 lat=41.743333 basinarea=554.258
+[Gauge 10113500] lon=-111.738056 lat=41.623611 basinarea=681.167
+[Gauge 10174500] lon=-112.429444 lat=37.651111 basinarea=880.596
+[Gauge 10242000] lon=-113.033889 lat=37.672222 basinarea=209.53
+[Gauge 10296000] lon=-119.449167 lat=38.379722 basinarea=468.788
+[Gauge 10296500] lon=-119.448889 lat=38.513333 basinarea=647.497
+[Gauge 10299100] lon=-119.325 lat=38.648611 basinarea=130.535
+[Gauge 10310000] lon=-119.832778 lat=38.769722 basinarea=169.385
+[Gauge 10311300] lon=-119.722222 lat=39.165028 basinarea=89.0956
+[Gauge 10316500] lon=-115.476111 lat=40.690833 basinarea=64.4907
+[Gauge 10329500] lon=-117.416944 lat=41.534722 basinarea=453.895
+[Gauge 11015000] lon=-116.622222 lat=32.834722 basinarea=117.585
+[Gauge 11113000] lon=-118.926389 lat=34.441667 basinarea=652.677
+[Gauge 11140000] lon=-120.305556 lat=34.893889 basinarea=1219.88
+[Gauge 11147500] lon=-120.683333 lat=35.628611 basinarea=1010.1
+[Gauge 11149900] lon=-121.087222 lat=35.896667 basinarea=562.027
+[Gauge 11164500] lon=-122.188333 lat=37.423333 basinarea=96.8656
+[Gauge 11335000] lon=-121.044167 lat=38.500278 basinarea=1388.23
+[Gauge 11476500] lon=-123.775 lat=40.181944 basinarea=1390.82
+[Gauge 11477000] lon=-124.098611 lat=40.491667 basinarea=8062.63
+[Gauge 11532500] lon=-124.075 lat=41.791667 basinarea=1590.25
+[Gauge 12323760] lon=-112.913333 lat=46.133611 basinarea=406.628
+[Gauge 12331800] lon=-113.33 lat=46.712222 basinarea=6477.56
+[Gauge 12334510] lon=-113.682222 lat=46.7225 basinarea=2292.14
+[Gauge 12340000] lon=-113.755556 lat=46.899722 basinarea=5931.07
+[Gauge 12340500] lon=-113.931389 lat=46.877222 basinarea=15537.3
+[Gauge 12350250] lon=-114.122778 lat=46.443333 basinarea=5084.15
+[Gauge 12352500] lon=-114.053056 lat=46.831944 basinarea=7288.23
+[Gauge 12353000] lon=-114.125833 lat=46.869167 basinarea=23317.7
+[Gauge 12354500] lon=-115.086389 lat=47.301944 basinarea=27736.2
+[Gauge 12370000] lon=-113.978889 lat=48.024444 basinarea=1737.88
+[Gauge 12413500] lon=-116.324444 lat=47.555 basinarea=3167.56
+[Gauge 13010065] lon=-110.6675 lat=44.098889 basinarea=1258.73
+[Gauge 13011500] lon=-110.517778 lat=43.850278 basinarea=437.708
+[Gauge 13011900] lon=-110.440833 lat=43.838056 basinarea=836.566
+[Gauge 13162225] lon=-115.427778 lat=41.890556 basinarea=79.2536
+[Gauge 14046000] lon=-119.430556 lat=44.813889 basinarea=6526.77
+[Gauge 14188800] lon=-122.768889 lat=44.712222 basinarea=284.199
+[Gauge 14190500] lon=-123.233333 lat=44.783333 basinarea=621.597
+[Gauge 14194150] lon=-123.181389 lat=45.205833 basinarea=1367.51
+[Gauge 14200000] lon=-122.686111 lat=45.244444 basinarea=836.566
+[Gauge 14202000] lon=-122.748889 lat=45.233333 basinarea=1240.6
+[Gauge 14211500] lon=-122.506667 lat=45.477778 basinarea=69.4117
+[Gauge 14303600] lon=-123.845833 lat=45.266667 basinarea=466.198
+[Gauge 14305500] lon=-123.886111 lat=44.715278 basinarea=523.178
+
+[basin test]
+gauge=08012000
+gauge=08013000
+gauge=08013500
+gauge=08014500
+gauge=08015500
+gauge=08017200
+gauge=08017300
+gauge=08028000
+gauge=08031000
+gauge=08041500
+gauge=08048970
+gauge=08061540
+gauge=08065800
+gauge=08066300
+gauge=08068325
+gauge=08069000
+gauge=08070200
+gauge=08070500
+gauge=08071000
+gauge=08074500
+gauge=08075770
+gauge=08076500
+gauge=08083100
+gauge=08084800
+gauge=08086290
+gauge=08105095
+gauge=08120500
+gauge=08123800
+gauge=08150000
+gauge=08150700
+gauge=08150800
+gauge=08152000
+gauge=08152900
+gauge=08155200
+gauge=08158700
+gauge=08159000
+gauge=08162600
+gauge=08164600
+gauge=08165500
+gauge=08166000
+gauge=08167500
+gauge=08171000
+gauge=08175000
+gauge=08176900
+gauge=08178880
+gauge=08186000
+gauge=08189500
+gauge=08189700
+gauge=08190500
+gauge=08195000
+gauge=08198500
+gauge=08200000
+gauge=08200720
+gauge=08201500
+gauge=08202700
+gauge=08205500
+gauge=08206600
+gauge=08211520
+gauge=08212400
+gauge=08279000
+gauge=08378500
+gauge=08447020
+gauge=09036000
+gauge=09037500
+gauge=09050100
+gauge=09146200
+gauge=09165000
+gauge=09166500
+gauge=09217900
+gauge=09304500
+gauge=09361500
+gauge=09473000
+gauge=09484000
+gauge=09484500
+gauge=09484600
+gauge=09498500
+gauge=09499000
+gauge=09512280
+gauge=09535100
+gauge=10105900
+gauge=10109000
+gauge=10113500
+gauge=10174500
+gauge=10242000
+gauge=10296000
+gauge=10296500
+gauge=10299100
+gauge=10310000
+gauge=10311300
+gauge=10316500
+gauge=10329500
+gauge=11015000
+gauge=11113000
+gauge=11140000
+gauge=11147500
+gauge=11149900
+gauge=11164500
+gauge=11335000
+gauge=11476500
+gauge=11477000
+gauge=11532500
+gauge=12323760
+gauge=12331800
+gauge=12334510
+gauge=12340000
+gauge=12340500
+gauge=12350250
+gauge=12352500
+gauge=12353000
+gauge=12354500
+gauge=12370000
+gauge=12413500
+gauge=13010065
+gauge=13011500
+gauge=13011900
+gauge=13162225
+gauge=14046000
+gauge=14188800
+gauge=14190500
+gauge=14194150
+gauge=14200000
+gauge=14202000
+gauge=14211500
+gauge=14303600
+gauge=14305500
+
+[CrestParamSet ABRFC]
+wm_grid=ef5_op_setup/EF5-US-Parameters-master/crest_params/wm_usa.tif
+im_grid=ef5_op_setup/EF5-US-Parameters-master/crest_params/im_usa.tif
+fc_grid=ef5_op_setup/EF5-US-Parameters-master/crest_params/ksat_usa.tif
+b_grid=ef5_op_setup/EF5-US-Parameters-master/crest_params/b_usa.tif
+gauge=14305500
+wm=1.0
+b=1.0
+im=0.005
+ke=1.0
+fc=1.00
+iwu=75.0
+
+[kwparamset abrfc]
+under_grid=ef5_op_setup/EF5-US-Parameters-master/kw_params/ksat_usa.tif
+leaki_grid=ef5_op_setup/EF5-US-Parameters-master/kw_params/leaki_usa.tif
+alpha_grid=ef5_op_setup/EF5-US-Parameters-master/kw_params/alpha_usa.tif
+beta_grid=ef5_op_setup/EF5-US-Parameters-master/kw_params/beta_usa.tif
+alpha0_grid=ef5_op_setup/EF5-US-Parameters-master/kw_params/alpha0_usa.tif
+gauge=14305500
+alpha=1.0
+alpha0=1.0
+beta=1.0
+under=0.001
+leaki=1.0
+th=10.0
+isu=0.0
+
+[Task Simu]
+STYLE=simu
+MODEL=crest
+ROUTING=KW
+BASIN=test
+PRECIP=IMERG
+PET=CLIMO
+OUTPUT=/Shared/lss_hvergaraarrieta/external_collaborations/IMERG_EF5_USA_Devon_Pierre/EF5_outputs_V06/final/b
+defaultparamsgauge=14305500
+PARAM_SET=Abrfc
+ROUTING_PARAM_Set=abrfc
+TIMESTEP=30u
+TIME_BEGIN=200101010000
+#TIME_WARMEND=200101010000
+#TIME_END=200101010200
+TIME_WARMEND=200201010000
+TIME_END=201112312330
+
+
+[Execute]
+task=Simu

@@ -1,0 +1,22 @@
+# Bulk data — keep these locally / on HPC, never push
+data/usgs/
+data/events/
+data/flash/
+data/results/master_peaks.parquet
+data/results/master_peaks.csv
+data/figures/
+logs/
+__pycache__/
+*.pyc
+*.done
+*.tmp
+.venv/
+.envrc
+.ipynb_checkpoints/
+.DS_Store
+
+# Allow the small files we want versioned
+!data/sites/sites_master.csv
+!data/sites/raw/.gitkeep
+!data/results/metrics_by_model.csv
+!data/results/summary_per_basin.csv

@@ -1,0 +1,15 @@
+numpy
+pandas
+pyarrow
+scipy
+matplotlib
+requests
+boto3
+botocore
+pygrib
+eccodes
+jupyterlab
+tqdm
+hydrotools.events
+hydrotools.nwis-client
+pynhd
